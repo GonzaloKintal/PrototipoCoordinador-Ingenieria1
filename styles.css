@@ -37,11 +37,12 @@ nav a:hover {
 #container {
     display: flex;
     justify-content: space-between;
+    min-height: 100vh;
 }
 
 #map {
     width: 50%;
-    height: auto;
+    min-height: 100vh;
     border: 2px solid #ccc;
 }
 
