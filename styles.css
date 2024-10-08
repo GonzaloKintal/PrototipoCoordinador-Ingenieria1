@@ -36,7 +36,7 @@ nav a:hover {
 
 #container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 100vh;
 }
 
@@ -75,13 +75,17 @@ h2 {
     line-height: 1.5;
 }
 
+.info-panel li:not(:last-child) {
+    padding-bottom: 10px;
+}
+
 #centers-list {
     list-style-type: none;
-    padding-left: 20px;
+    padding: 0;
 }
 
 button {
-    padding: 15px;
+    padding: 15px 0px;
     font-size: 18px;
     background-color: #3498db;
     color: white;

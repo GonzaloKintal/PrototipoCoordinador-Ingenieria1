@@ -99,10 +99,41 @@ document.getElementById('centers-list').innerHTML = `
 `;
 
 // Funcionalidad de los botones con SweetAlert
+document.getElementById('consultar-pacientes').addEventListener('click', function() {
+    Swal.fire({
+        title: 'Consultar pacientes que no completaron la encuesta',
+        text: 'Seleccione el centro para ver los pacientes que no han completado la encuesta:',
+        input: 'select',
+        inputOptions: {
+            'Hospital Larcade': 'Hospital Larcade',
+            'Clínica Bessone': 'Clínica Bessone',
+            'Sanatorio San Miguel': 'Sanatorio San Miguel'
+        },
+        inputPlaceholder: 'Seleccione un centro',
+        showCancelButton: true,
+        confirmButtonText: 'Consultar',
+        cancelButtonText: 'Cancelar',
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Debe seleccionar un centro para continuar.'; // Mensaje de error si no selecciona nada
+            }
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const centerName = result.value;
+            Swal.fire(
+                'Consultando...',
+                `Usted será redirigido a una nueva ventana donde verá qué pacientes no completaron la encuesta de ${centerName}.`,
+                'info'
+            );
+        }
+    });
+});
+
 document.getElementById('send-reminder').addEventListener('click', function() {
     Swal.fire({
         title: '¿Enviar recordatorio a los pacientes?',
-        text: "Esto enviará un recordatorio a todos los pacientes cuyas encuestas estén pendientes.",
+        text: "Esto enviará un recordatorio a todos los pacientes de su zona cuyas encuestas estén pendientes.",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Sí, enviar',
