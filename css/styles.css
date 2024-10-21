@@ -53,7 +53,8 @@ nav a:hover {
     height: auto;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
+    padding: 30px 0px;
 }
 
 h1 {
@@ -75,13 +76,35 @@ h2 {
     line-height: 1.5;
 }
 
-.info-panel li:not(:last-child) {
-    padding-bottom: 10px;
-}
-
-#centers-list {
+#centros-lista {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+}
+
+#centros-lista li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#centros-lista li:hover {
+    background-color: #f0f8ff;
+    font-weight: bold;
+    transform: scale(1.02);
+}
+
+.seleccionado {
+    background-color: #cce5ff;
+    font-weight: bold;
+}
+
+.info-panel button {
+    display: none;
 }
 
 button {
@@ -95,7 +118,7 @@ button {
     margin: 10px 0;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 button:hover {
@@ -125,10 +148,14 @@ footer {
     .info-panel {
         width: 100vw;
         height: auto;
-        padding: 0;
     }
 
     h1 {
         font-size: 20px;
     }
+
+    #centros-lista, button {
+        width: 95%;
+    }
 }
+

@@ -5,32 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Zonas - Coordinador</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Encuesta</a></li>
-            <li><a href="#">Contactar</a></li>
         </ul>
     </nav>
 
-    <div id="container">
+    <main id="container">
         <div id="map"></div>
-
         <div class="info-panel">
             <h1>Bienvenido, Coordinador [Nombre del Coordinador]</h1>
-            <p><b>Zona Responsable: </b>Zona 1</p>
+            <p><b>Zona Responsable: Zona 1</b></p>
             <p>Detalles de los centros en la zona a cargo:</p>
-            <ul id="centers-list">
-                <!-- Acá aparecerán los centros de la zona a cargo -->
+            <ul id="centros-lista">
             </ul>
             <button id="consultar-pacientes">Consultar pacientes que no completaron la encuesta</button>
-            <button id="send-reminder">Enviar Recordatorio a Pacientes</button>
-            <button id="view-reports">Ver Reportes de Encuestas</button>
+            <button id="enviar-recordatorios">Enviar Recordatorio a Pacientes</button>
+            <button id="ver-reportes">Ver Reportes de Encuestas</button>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>2024 Sistema de Encuestas. &copy; </p>
@@ -39,6 +36,7 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="script.js"></script>
+    <script type="module" src="js/mapa.js"></script>
+    <script src="js/botones.js"></script>
 </body>
 </html>
