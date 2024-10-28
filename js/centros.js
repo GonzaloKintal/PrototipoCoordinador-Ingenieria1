@@ -1,4 +1,4 @@
-export const centros = [
+window.centros = [
     {
         nombre: "Hospital Larcade",
         direccion: "Av. Perón 2311, San Miguel, Provincia de Buenos Aires",

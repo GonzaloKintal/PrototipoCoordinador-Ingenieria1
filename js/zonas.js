@@ -1,4 +1,4 @@
-export const zonas = [
+window.zonas  = [
     {
         nombre: "Zona 1",
         coordenadas: [

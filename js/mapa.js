@@ -1,5 +1,5 @@
-import { centros } from './centros.js';
-import { zonas } from './zonas.js';
+const centros = window.centros;
+const zonas = window.zonas;
 
 function initMap() {
     const mapa = L.map('map').setView([-34.5183621, -58.7210417], 12);
